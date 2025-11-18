@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en_US">
+
+<head>
+<title>PLACS</title>
+
+<link rel="stylesheet" href="styles/glosario.css"> 
+<link rel="stylesheet" href="styles/navbar.css"> 
+<link rel="icon" type="image/x-icon" href="img/gato.jpg">
+</head>
+
+<body>
+
+
+<nav  class="navcontainer" >
+
+<div class="atajos">
+<ul>
+    <li><a href="index.html"><img src="img/icohome.svg" alt="iconohome" ></a></li>
+    
+
+    <!-- <li class="spacer"></li> -->
+</ul>
+<ul>
+    <li><a href="index.html">PLACS</a></li>
+</ul>
+<ul>
+    <li><a href="index.html"><img src="img/iconotifs.svg" alt="icononotificaciones"></a></li>
+    <li><a href="carrito.html"><img src="img/carro.svg" alt="iconocarrito"></a></li>
+    <li><a href="index.html"><img src="img/icocuenta.svg" alt="iconocuenta"></a></li>
+</ul>
+</div>
+
+<div class="search-container">
+    <input type="text" class="navsearchbox" placeholder="Search..">
+</div>
+
+</nav>
+
+
+<div>
+<h1>Título</h1>
+</div>
+
+<div class="container-glosario">  
+    <div class="glosario-item">
+        <img src="img/lente.jpg" alt="lente">
+
+        <p>Este es un lente</p>
+    </div>
+    <div class="spacer"></div>
+    <div class="glosario-item">
+        <img id="fotoPagina" src="img/tripode.jpg" alt="tripode">
+        <label for="input_1">Subir imagen 1</label>
+        <input id="input_1" class="subirimagen" type="file" accept="image/jpg, image/png, image/jpeg">
+        <p id="parrafo_1">Este es un tripode</p>
+        <label for="input_parrafo">escribe texto</label>
+        <input id="input_parrafo" class="escribeparrafo" type="text">
+    </div>
+</div>
+
+<p id="demo"> Hola = 0 </p>
+
+
+ <!-- IMAGEN 1-->
+
+ <!-- <img id="fotoPagina" src="" alt="">
+ <label for="input_1">etiqueta</label>
+ <input id="input_1" class="subirimagen" type="file" accept="image/jpg, image/png, image/jpeg">
+ <button onclick="wipemem()">RESET ALL</button>
+ <br>
+  -->
+
+ <!-- IMAGEN 2-->
+<!-- <label for="input_2">Local Guardar</label> 
+<input id="input_2" type="file" accept="image/jpg, image/png, image/jpeg"> -->
+
+
+<!-- CONTADOR-->
+<br>
+<button onclick="updateValue()">I'm a button</button>
+<button onclick="reset()">reset</button>
+<!-- <button onclick='document.getElementById("demo").innerHTML = `abc = ${numero++}`'>soy un boton</button> -->
+
+
+
+<script>
+
+
+//INPUT 2
+
+// const localGuardar = document.getElementById('input_2');
+
+// localGuardar.addEventListener('change', () => {
+//   const fr = new FileReader();
+
+//   fr.readAsDataURL(localGuardar.files[0]);
+
+//   fr.addEventListener('load', () =>{
+
+//     const url = fr.result;
+
+//     localStorage.setItem('input_2', url)
+
+//   })
+// })
+
+// const obtenerImg = localStorage.getItem('input_2');
+// const imgUrl = new Image();
+// imgUrl.src= obtenerImg;
+
+
+
+
+//INPUT 1
+
+let foto = document.getElementById("fotoPagina");
+foto.src = localStorage.getItem("imageninput1") || "img/tripode.jpg" ;
+let input1 = document.getElementById("input_1");
+
+input1.onchange = function () {
+    foto.src = URL.createObjectURL(input1.files[0]);
+    localStorage.setItem("imageninput1", foto.src);
+}
+
+
+//parrafo 1
+let parrafo1 =  localstorage.getItem("parrafo") || document.getElementById("parrafo_1");
+inputParrafo = document.getElementById("input_parrafo");
+
+function updateParrafo(){
+    localstorage.setItem("parrafo", inputParrafo);
+}
+
+
+
+
+//CONTADOR
+let num = parseInt(localStorage.getItem("num")) || 0;
+document.getElementById("demo").innerHTML = `abc = ${num}`;
+// document.getElementById("demo").innerHTML = localStorage.setItem("demo");
+// document.getElementById("demo").innerHTML = `abc = ${numero+=1}`;
+
+function updateValue() {
+  
+  num++;
+
+  localStorage.setItem("num", num);
+
+ 
+  document.getElementById("demo").innerHTML = `abc = ${num}`;
+}
+
+function reset() {
+    num= 0;
+
+    localStorage.setItem("num", num)
+
+    document.getElementById("demo").innerHTML = `abc = ${num}`;
+}
+
+
+
+function wipemem() {
+    localStorage.clear();
+    foto.src = "";
+}
+</script>
+
+</body>
+</html>
