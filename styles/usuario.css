@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  padding: 0;
+ 
+}
+
+/* MIS COLORES */
+:root {
+    --primary_color: #550000;
+    --primary_color_shade: hsl(0, 100%, 10%);
+    --secondary_color: #00555555;
+    --accent_color1: #00552A ;
+    --accent_color2: #002A55 ;
+    --background_color: white;
+    --background_accent: gray;
+    --text_color: black;
+    --text_color_accent:white;
+
+    --tam: 30px;
+}
+
+/* colores de uninorte */
+/* :root {
+    --primary_color: #D10A11;
+    --secondary_color: #0AD1CA;
+    --accent_color1: #0AD167 ;
+    --accent_color2: #0A74D1 ;
+    --background_color: white;
+    --negro: black;
+}  */
+
+
+.atajos{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+  
+  background: var(--primary_color);
+  
+  
+}
+
+.atajos li a img{
+  width: var(--tam);
+  height: var(--tam);
+}
+
+.navcontainer ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  
+}
+
+.navcontainer li a {
+  text-decoration: none;
+  color: var(--text_color_accent);
+}
+
+
+
+
+.search-container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--primary_color_shade);
+}
+
+.navsearchbox {
+  
+  width: 40%;
+  align-items: center;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+
+.image-section{
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.main-image img{
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease; 
+}
+
+.main-image img:hover{
+    transform:scale(1.05);
+}
+
+.thumb-gallery-wrapper{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 500px;
+    overflow: hidden;
+}
+
+.thumb-gallery img{
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+}
+
+.thumb-gallery img:hover{
+    border: 2px solid #007bff;
+}

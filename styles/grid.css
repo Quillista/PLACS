@@ -1,0 +1,90 @@
+/* MIS COLORES */
+:root {
+    --primary_color: #550000;
+    --primary_color_shade: hsl(0, 100%, 10%);
+    --secondary_color: #00555555;
+    --accent_color1: #00552A ;
+    --accent_color2: #002A55 ;
+    --background_color: white;
+    --background_accent: gray;
+    --text_color: black;
+    --text_color_accent:white;
+
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto; 
+  /* grid-template-columns: repeat(4, auto); ; */
+  background-color: var(--background_color);
+  padding: 10px;
+  box-sizing: border-box;
+}
+.grid-container div {
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.grid-container div img{
+  max-width: 100%;
+}
+
+.espacios a img{
+    
+    height: clamp(100px, 400px, 400px);
+    width: clamp(100px, 500px, 500px);
+    
+}
+.camaras a img{
+    
+    height: clamp(100px, 200px, 200px);
+    width: clamp(100px, 500px, 400px);
+    
+}
+
+.microfonos a img{
+    
+    height: clamp(100px, 200px, 200px);
+    width: clamp(100px, 500px, 400px);
+    
+}
+
+.grabadoras a img{
+    
+    height: clamp(100px, 200px, 200px);
+    width: clamp(100px, 500px, 400px);
+    
+}
+
+.iluminacion a img{
+    
+    height: clamp(100px, 200px, 200px);
+    width: clamp(100px, 500px, 400px);
+    
+}
+
+.tripodes a img{
+    
+    height: clamp(100px, 200px, 200px);
+    width: clamp(100px, 500px, 400px);
+    
+}
+
+.accesorioscel a img{
+    
+    height: clamp(100px, 200px, 200px);
+    width: clamp(100px, 500px, 400px);
+    
+}
+
+.grid-container .carritoBtn img{
+  
+  height: 30px;
+  width: 50px;
+  background-color: black;
+} 

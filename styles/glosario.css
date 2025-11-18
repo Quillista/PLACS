@@ -1,0 +1,52 @@
+
+
+.container-glosario{
+ width: 100%s;   
+}
+
+.glosario-item{
+
+  display: flex;          
+  align-items: center;      
+  width: 100%;              
+  margin-bottom: 10px;      
+  border: 1px solid #ccc;  
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+.glosario-item img{
+    
+    width: 400px;
+    height: 500px ;
+    margin-right: 10px;
+}
+
+/* .spacer{
+
+    width: max-content;
+    height: max-content;
+} */
+
+.glosario-item p{
+    margin: 0;                 
+    flex: 1;    
+}
+
+
+/* .accesorio-item input{
+  display: contents;
+}
+
+.accesorio-item label{
+  display:block;
+  width:200px;
+  background: #e3362c;
+  color: #fff;
+  padding: 12px;
+  margin: 10px auto;
+  border-radius: 5px;
+  cursor: pointer;
+
+} */
